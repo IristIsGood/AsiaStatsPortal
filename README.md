@@ -1,59 +1,179 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🌏 Asia Stats Portal
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A full-stack statistical data portal inspired by the Asian Development Bank's **Key Indicators Database (KIDB)**. Built with PHP/Laravel 11 and Vue 3, featuring a public REST API that supports multiple output formats, role-based access control, and a data validation workflow.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 Live Demo
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+> Coming soon — Azure deployment in progress
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## ✨ Features
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **REST API** — Query statistical data with JSON, CSV, and XML output formats
+- **Data Explorer** — Filter by country, indicator, and year with real-time results
+- **Data Validation Workflow** — Submit data points for admin review (pending → approved/rejected)
+- **Role-Based Access Control** — Public read access; admin/editor token required for write operations
+- **Sub-national Data Support** — Regional breakdowns within countries (e.g. Philippine regions)
+- **Audit Logging** — All data changes tracked with user, action, and timestamp
+- **Interactive Dashboard** — GDP comparison chart powered by Chart.js
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+## 🛠 Tech Stack
 
-## Agentic Development
+| Layer | Technology |
+|-------|-----------|
+| Backend | PHP 8.3 + Laravel 11 |
+| Frontend | Vue 3 + TypeScript + Pinia |
+| Database | MySQL / MariaDB |
+| Auth | Laravel Sanctum (token-based) |
+| Styling | Tailwind CSS v4 |
+| Charts | Chart.js + vue-chartjs |
+| Build Tool | Vite 8 |
+| Cloud | Microsoft Azure (App Service + Azure DB) |
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+---
 
-```bash
-composer require laravel/boost --dev
+## 📁 Project Structure
 
-php artisan boost:install
+```
+asia-stats-portal/
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/Api/
+│   │   │   ├── AuthController.php
+│   │   │   ├── DataPointController.php
+│   │   │   ├── DataValidationController.php
+│   │   │   ├── IndicatorController.php
+│   │   │   └── RegionController.php
+│   │   └── Traits/
+│   │       └── FormatsApiResponse.php   # JSON / CSV / XML output
+│   └── Models/
+│       ├── AuditLog.php
+│       ├── DataPoint.php
+│       ├── Indicator.php
+│       ├── Region.php
+│       └── User.php
+├── database/
+│   ├── migrations/
+│   └── seeders/                         # 8 countries, 10 indicators, real data
+├── resources/js/
+│   ├── views/
+│   │   ├── Dashboard.vue
+│   │   ├── DataExplorer.vue
+│   │   ├── Indicators.vue
+│   │   ├── Admin.vue
+│   │   └── Login.vue
+│   ├── stores/
+│   │   └── auth.js                      # Pinia auth store
+│   └── router.js                        # Vue Router with navigation guards
+└── routes/
+    └── api.php                          # REST API routes
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+---
 
-## Contributing
+## 🗄 Database Schema
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```
+indicators     — Statistical indicators (GDP, Population, CO2, etc.)
+regions        — Countries and sub-national regions
+data_points    — Actual data values (indicator × region × year)
+users          — System users with roles (admin / editor / viewer)
+audit_logs     — Immutable log of all data changes
+```
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+## ⚙️ Local Setup
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Prerequisites
 
-## License
+- PHP 8.3+
+- Composer
+- MySQL 8.0+
+- Node.js 18+
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# AsiaStatsPortal
+### Installation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/YOUR_USERNAME/asia-stats-portal.git
+cd asia-stats-portal
+
+# 2. Install PHP dependencies
+composer install
+
+# 3. Install Node dependencies
+npm install
+
+# 4. Copy environment file
+cp .env.example .env
+
+# 5. Generate application key
+php artisan key:generate
+
+# 6. Configure database in .env
+DB_DATABASE=asia_stats_portal
+DB_USERNAME=root
+DB_PASSWORD=your_password
+
+# 7. Run migrations and seed data
+php artisan migrate
+php artisan db:seed
+
+# 8. Start development servers (two terminals)
+php artisan serve       # Terminal 1 — Laravel on :8000
+npm run dev             # Terminal 2 — Vite on :5173
+```
+
+### Default Admin Account
+
+```
+Email:    admin@test.com
+Password: password123
+Role:     admin
+```
+
+
+---
+
+## 🔐 User Roles
+
+| Role | Read | Create/Update | Validate Data | Delete |
+|------|------|---------------|---------------|--------|
+| viewer | ✅ | ❌ | ❌ | ❌ |
+| admin | ✅ | ✅ | ✅ | ✅ |
+
+---
+
+## 📊 Sample Data
+
+The database is seeded with real statistical data for 8 Asian economies:
+
+| Country | GDP 2023 (USD bn) | Population 2023 (M) |
+|---------|-------------------|----------------------|
+| China | 17,794 | 1,409 |
+| India | 3,732 | 1,428 |
+| Indonesia | 1,417 | 281 |
+| Thailand | 512 | 70 |
+| Philippines | 464 | 114 |
+| Malaysia | 431 | 34 |
+| Viet Nam | 430 | 99 |
+| Singapore | 501 | 5.9 |
+
+Sources: World Bank, UN Population Division
+
+---
+
+---
+
+🛡️ License
+MIT
+
+👤 Developer
+Irist – Building tools that turn raw market data into trading intelligence.
