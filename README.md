@@ -6,7 +6,7 @@ A full-stack statistical data portal that built with PHP/Laravel 11 and Vue 3, f
 
 ## 🚀 Live Demo
 
-> Coming soon — Azure deployment in progress
+https://asia-stats-portal.azurewebsites.net
 
 ---
 
