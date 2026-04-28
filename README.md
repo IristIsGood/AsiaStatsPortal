@@ -1,6 +1,6 @@
 # 🌏 Asia Stats Portal
 
-A full-stack statistical data portal inspired by the Asian Development Bank's **Key Indicators Database (KIDB)**. Built with PHP/Laravel 11 and Vue 3, featuring a public REST API that supports multiple output formats, role-based access control, and a data validation workflow.
+A full-stack statistical data portal **Key Indicators Database (KIDB)**. Built with PHP/Laravel 11 and Vue 3, featuring a public REST API that supports multiple output formats, role-based access control, and a data validation workflow.
 
 ---
 
