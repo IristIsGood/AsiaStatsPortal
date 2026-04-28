@@ -1,0 +1,42 @@
+<step title="Incoming Request" date="2026-04-28T05:35:20.154" instance="cadad9" url="/api/publish?type=zip" method="POST" type="request" pid="838,1,3" Accept="*/*" Host="asia-stats-portal.scm.azurewebsites.net" User-Agent="AZURECLI/2.85.0 (HOMEBREW)" Accept-Encoding="gzip, deflate" Authorization="Bea..." Cache-Control="no-cache" Content-Type="application/octet-stream" Cookie="ARRAffinity=cadad982d09f8236d2fe7f442b48a1c4d00f5a5da74f537c1ad667e686ffc561; ARRAffinitySameSite=cadad982d09f8236d2fe7f442b48a1c4d00f5a5da74f537c1ad667e686ffc561" Content-Length="29624394" x-ms-client-request-id="ffee2f16-42c3-11f1-9c48-7a6141f5bef2" x-ms-artifact-checksum="7aefa542c3761a3652d6eee2d38652a8c13903aa2755a1ef7bcb6c385ccebc39" X-ARR-LOG-ID="ffee2f16-42c3-11f1-9c48-7a6141f5bef2" CLIENT-IP="112.201.99.127:13624" X-SITE-DEPLOYMENT-ID="asia-stats-portal" WAS-DEFAULT-HOSTNAME="asia-stats-portal.scm.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/api/publish?type=zip" X-Client-IP="112.201.99.127" X-Client-Port="13624" >
+  <step title="OneDeploy" date="2026-04-28T05:35:20.482" >
+    <step title="None repository commit" date="2026-04-28T05:35:20.728" >
+      <step title="Commit id: 1c1a1a7e-f3d8-4abc-9c3b-dd2115e4f689" date="2026-04-28T05:35:20.807" Message="N/A" AuthorName="N/A" AuthorEmail="N/A" /><!-- duration: 39ms -->
+    </step><!-- duration: 140ms -->
+    <step title="Starting PushDeployAsync" date="2026-04-28T05:35:20.908" /><!-- duration: 109ms -->
+    <step title="Writing artifact to /tmp/zipdeploy/4156d9ad-dbd6-4203-ab84-ca44ae156a07.zip" date="2026-04-28T05:35:21.175" >
+      <step title="Writing multipart request body to /tmp/zipdeploy/4156d9ad-dbd6-4203-ab84-ca44ae156a07.zip" date="2026-04-28T05:35:21.188" /><!-- duration: 50ms -->
+    </step><!-- duration: 10316ms -->
+    <step title="None repository commit" date="2026-04-28T05:35:31.729" >
+      <step title="Commit id: 1c1a1a7e-f3d8-4abc-9c3b-dd2115e4f689" date="2026-04-28T05:35:31.757" Message="N/A" AuthorName="N/A" AuthorEmail="N/A" /><!-- duration: 11ms -->
+    </step><!-- duration: 88ms -->
+    <step title="Attempting to fetch target branch HEAD" date="2026-04-28T05:35:31.909" /><!-- duration: 170ms -->
+    <step title="Acquiring Deployment Lock" date="2026-04-28T05:35:32.146" /><!-- duration: 59ms -->
+    <step title="Acquired Deployment Lock" date="2026-04-28T05:35:32.606" /><!-- duration: 120ms -->
+    <step title="None repository commit" date="2026-04-28T05:35:32.891" >
+      <step title="Commit id: 1c1a1a7e-f3d8-4abc-9c3b-dd2115e4f689" date="2026-04-28T05:35:32.932" Message="N/A" AuthorName="N/A" AuthorEmail="N/A" /><!-- duration: 59ms -->
+    </step><!-- duration: 141ms -->
+    <step title="Performing fetch based deployment" date="2026-04-28T05:35:33.123" >
+      <step title="Creating temporary deployment" date="2026-04-28T05:35:33.282" /><!-- duration: 521ms -->
+      <step title="Releasing Deployment Lock" date="2026-04-28T05:35:35.941" /><!-- duration: 139ms -->
+      <step title="Cleaning up temp folders from previous zip deployments and extracting pushed zip file /tmp/zipdeploy/4156d9ad-dbd6-4203-ab84-ca44ae156a07.zip (28.25 MB) to /tmp/zipdeploy/extracted" date="2026-04-28T05:35:36.398" >
+        <step title="ChmodRecursive Process exited with total time taken in ms: 686" date="2026-04-28T05:36:38.822" /><!-- duration: 12ms -->
+      </step><!-- duration: 62684ms -->
+      <step title="None repository commit" date="2026-04-28T05:36:39.088" >
+        <step title="Commit id: 1c1a1a7e-f3d8-4abc-9c3b-dd2115e4f689" date="2026-04-28T05:36:39.095" Message="OneDeploy" AuthorName="N/A" AuthorEmail="N/A" /><!-- duration: 7ms -->
+      </step><!-- duration: 18ms -->
+      <step title="None repository commit" date="2026-04-28T05:36:41.110" >
+        <step title="Commit id: 1c1a1a7e-f3d8-4abc-9c3b-dd2115e4f689" date="2026-04-28T05:36:41.130" Message="N/A" AuthorName="N/A" AuthorEmail="N/A" /><!-- duration: 7ms -->
+      </step><!-- duration: 37ms -->
+      <step title="Deployment timer started" date="2026-04-28T05:36:41.159" >
+        <step title="DeploymentManager.Deploy(id:1c1a1a7e-f3d8-4abc-9c3b-dd2115e4f689)" date="2026-04-28T05:36:41.179" >
+          <step title="Collecting changeset information" date="2026-04-28T05:36:41.316" /><!-- duration: 396ms -->
+          <step title="Updating submodules" date="2026-04-28T05:36:41.752" /><!-- duration: 1221ms -->
+          <step title="Determining deployment builder" date="2026-04-28T05:36:43.256" >
+            <step title="Specific project was specified: ." date="2026-04-28T05:36:43.263" /><!-- duration: 6ms -->
+            <step title="Builder is OneDeployBuilder" date="2026-04-28T05:36:43.278" /><!-- duration: 12ms -->
+          </step><!-- duration: 62ms -->
+          <step title="PreDeployment: context.CleanOutputPath False" date="2026-04-28T05:36:43.378" >
+            <step title="PreDeployment: context.OutputPath /home/site/wwwroot" date="2026-04-28T05:36:43.574" >
+              <step title="Building" date="2026-04-28T05:36:43.773" >
+                <step title="Executing external process" date="2026-04-28T05:36:44.260" type="process" path="starter.sh" arguments="/opt/Kudu/Scripts/parallel_rsync.sh /tmp/zipdeploy/extracted /home/site/wwwroot 8 /tmp/ False False  " 

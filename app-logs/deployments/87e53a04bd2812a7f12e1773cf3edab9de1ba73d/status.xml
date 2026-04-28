@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<deployment>
+  <id>87e53a04bd2812a7f12e1773cf3edab9de1ba73d</id>
+  <author>IristIsGood</author>
+  <deployer>GitHub</deployer>
+  <authorEmail>anneirist97@gmail.com</authorEmail>
+  <message>feat: Asia Stats Portal initial deployment</message>
+  <progress></progress>
+  <status>Success</status>
+  <statusText></statusText>
+  <lastSuccessEndTime>2026-04-28T05:05:34.2752759Z</lastSuccessEndTime>
+  <receivedTime>2026-04-28T03:41:34.5845695Z</receivedTime>
+  <startTime>2026-04-28T05:01:19.4313414Z</startTime>
+  <endTime>2026-04-28T05:05:34.2752759Z</endTime>
+  <complete>True</complete>
+  <is_temp>False</is_temp>
+  <is_readonly>False</is_readonly>
+  <containerId>b02b8056f417</containerId>
+  <buildSummary />
+</deployment>

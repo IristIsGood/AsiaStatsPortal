@@ -1,6 +1,3 @@
 #!/bin/bash
-cd /home/site/wwwroot
-php artisan config:cache
-php artisan route:cache
-php artisan migrate --force
-php artisan db:seed --force
+cp /home/site/wwwroot/nginx.conf /etc/nginx/sites-available/default
+service nginx restart
